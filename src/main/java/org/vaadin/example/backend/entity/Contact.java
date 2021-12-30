@@ -12,12 +12,17 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+@Data
 @Entity
-@Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Contact extends AbstractEntity implements Cloneable{
 
     @NotEmpty
@@ -33,9 +38,7 @@ public class Contact extends AbstractEntity implements Cloneable{
     private Company company;
 
     @NotNull
-    @ManyToOne
-    @Enumerated(EnumType.STRING)
-    private Status status;
+    private String status;
 
     @Email
     @NotEmpty

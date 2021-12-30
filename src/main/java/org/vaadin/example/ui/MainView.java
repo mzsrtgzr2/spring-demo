@@ -30,10 +30,7 @@ public class MainView extends VerticalLayout {
     private final DatePicker datePicker = new DatePicker("Pick a date");
 
     public MainView() {
-        Company company = new Company("ba", new LinkedList<Contact>());
-        company.setName("buhes");
         
-
         HorizontalLayout layout = new HorizontalLayout(button, datePicker);
         layout.setDefaultVerticalComponentAlignment(Alignment.END);
         add(layout);
